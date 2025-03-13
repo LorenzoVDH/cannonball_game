@@ -1,0 +1,16 @@
+A game that showcases how linear regression works. 
+Must work in the browser
+
+Game where you control the 'weights' in a linear regression training session
+
+inputs
+    wind strength 
+    target position y
+
+weights
+    cannon strength 
+    cannon angle 
+
+outputs
+    cannonball y position at target x position 
+

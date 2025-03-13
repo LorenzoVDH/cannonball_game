@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannon Regression Game</title>
+    <style>
+        canvas { background: #fff; display: block; margin: auto; }
+        .controls { position: fixed; top: 20px; left: 20px; background: rgba(255,255,255,0.9); padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); max-width: 350px; z-index: 1000; font-family: sans-serif; }
+        input[type="range"] { width: 300px; }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas" width="1280" height="720"></canvas>
+    <canvas id="graphCanvas" width="1280" height="200" style="border: 1px solid #000; margin-top:20px;"></canvas>
+    <div class="controls">
+        <div><strong>Input</strong></div>
+        <div>
+            <label for="targetHeightSlider"><strong>Target Height:</strong></label>
+            <input type="range" id="targetHeightSlider" min="0" max="720" value="360" disabled>
+            <span id="targetHeightDisplay">360</span>
+        </div>
+        <hr>
+        <div>
+            <label for="angleSlider"><strong>Computed Angle:</strong></label>
+            <input type="range" id="angleSlider" min="0" max="135" value="45" readonly disabled>
+            <span id="angleDisplay">45</span>
+        </div>
+        <hr>
+        <div>
+            <label for="weightAngleSlider"><strong>Angle Weight:</strong></label>
+            <input type="range" id="weightAngleSlider" min="0" max="1" step="0.001" value="0.33">
+            <span id="weightAngleDisplay">0.33</span>
+        </div>
+    </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
